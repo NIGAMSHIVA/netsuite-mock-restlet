@@ -6,7 +6,7 @@ app.use(express.json());
 
 app.post("/netsuite/record", (req, res) => {
   try {
-    console.log("Incoming body:", req.body); // 👈 Add this line
+    console.log("Incoming body:", req.body); 
     const validated = beforeSubmit(req.body);
     res.status(200).json({ success: true, validated });
   } catch (err) {
